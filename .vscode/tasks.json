@@ -1,0 +1,12 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "C/C++: Build with OpenMP",
+        "type": "shell",
+        "command": "gcc",
+        "args": [ "-g", "-fopenmp", "${file}", "-o", "${fileDirname}/${fileBasenameNoExtension}" ],
+        "group": { "kind": "build", "isDefault": true }
+      }
+    ]
+  }

@@ -36,10 +36,9 @@ int main() {
         return 0;
     }
 
-    // Use OpenMP to parallelize the search
     #pragma omp parallel for shared(found, result)
     for (int i = n - 1; i >= 2; --i) {
-        // Use a local flag to prevent race condition
+    
         if (!found && isPrime(i)) {
             #pragma omp critical
             {
